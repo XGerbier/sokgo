@@ -55,6 +55,8 @@ namespace Sokgo
 
 		static void Main(string[] _args)
 		{
+			Trace.UseSyslog(Socks5Server.Config.TraceLogToSyslog);
+
 			Arguments args= new Arguments(_args);
 
 			bool bStart= (args[PARAM_START] != null);
